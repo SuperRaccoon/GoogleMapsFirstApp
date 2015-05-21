@@ -54,6 +54,10 @@
             android:label="@string/title_activity_info"
             android:windowSoftInputMode="adjustResize|stateHidden" >
         </activity>
+        <activity
+            android:name=".postMap"
+            android:label="@string/title_activity_post_map" >
+        </activity>
     </application>
 
 </manifest>

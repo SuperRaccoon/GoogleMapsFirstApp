@@ -39,7 +39,7 @@ public class InfoActivity extends ActionBarActivity {
     }
 
     public void postInfo(View view){
-        Intent getUser= new Intent(this, MapsActivity.class);
+        Intent getUser= new Intent(this, postMap.class);
         EditText userName= (EditText) findViewById(R.id.username);
         String  user=userName.getText().toString();
         getUser.putExtra("theUsername", user);

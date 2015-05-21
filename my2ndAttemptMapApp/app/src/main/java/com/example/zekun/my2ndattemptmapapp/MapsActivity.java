@@ -78,8 +78,14 @@ public class MapsActivity extends FragmentActivity implements
 
     public void goToPost(){
 
+        if (mGoogleApiClient.isConnected()) {
+            // LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+            mGoogleApiClient.disconnect();
+        }
         Intent goPostScreen= new Intent(this, InfoActivity.class);
         startActivity(goPostScreen);
+
+
 
     }
     public void updateMap(){//can add more functions in the future, all im interested now is if it can accurately track locations
@@ -155,10 +161,12 @@ public class MapsActivity extends FragmentActivity implements
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
 
         //mMap.addMarker(new MarkerOptions().position(new LatLng(currentLatitude, currentLongitude)).title("Current Location"));
+      /*
         MarkerOptions options = new MarkerOptions()
                 .position(latLng)
                 .title("I am here!");
         mMap.addMarker(options);
+        */
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
     }
