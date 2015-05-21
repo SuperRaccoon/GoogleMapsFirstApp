@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context=".FullscreenActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:layout_weight="0.20"
+        android:text="User" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/additionalInfo"
+        android:layout_weight="0.20"
+        android:text="Additional Info" />
+
+    <LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_alignParentBottom="true" style="@android:style/ButtonBar"
+        android:gravity="bottom">
+
+        <Button android:id="@+id/backButton" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="0.20"
+            android:text="Cancel" />
+
+        <Button android:id="@+id/postButton" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_weight="0.20"
+            android:text="Post"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</LinearLayout>
